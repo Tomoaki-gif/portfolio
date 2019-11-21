@@ -1,0 +1,223 @@
+// /* pc(large) */
+// @media screen and (min-width: 1280px) {
+// 	// navbar
+// 	.hiraku-open-btn {
+// 		display: none;
+// 	}
+// 	.nav-link {
+// 		font-size: $_font-size * 2.5;
+// 	}
+// 	//menu
+// 	.menu-text {
+// 		font-size: $_font-size * 1.5;
+// 	}
+// 	//access
+// 	.photo-jujiya {
+// 		width: 50%;
+// 	}
+// 	.map-wrap {
+// 		iframe {
+// 			width: 750px;
+// 			height: 480px
+// 		}
+// 	}
+// 	.mapinfo {
+// 		p {
+// 			font-size: $_font-size * 1.5;
+// 			text-indent: 1em;
+// 		}
+// 	}
+// }
+/* pc */
+@media screen and (min-width: 1180px) {
+	// navbar
+	#header {
+		position: relative;
+	}
+	// .hiraku-open-btn {
+	// 	display: none;
+	// }
+	.navbar {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+	}
+	// .js-hiraku-offcanvas {
+	// 	display: block;
+	// }
+}
+/* tablet */
+@media screen and (max-width:1179px) {
+	// navbar
+	#header {
+		position: relative;
+	}
+	.navbar {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-top: -30px;
+		z-index: 1;		
+	}
+	.nav-item {
+		margin-right: 5px;
+	}
+	.nav-link {
+		color: #fff;
+		font-size: $_font-size * 1.4;
+	}
+	// .hiraku-open-btn {
+	// 	display: none;
+	// }
+	//menu
+	.menu-wrap {
+		width: calc(50% - 10px);
+	}
+	.menu-wrap:nth-child(2) {
+		display: none;
+	}
+	//address
+	.address-wrap {
+		display: block;
+	}
+	.photo-jujiya {
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	.map-wrap {
+		margin-left: 0;
+		iframe {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.mapinfo {
+		text-align: left;
+		margin-top: 20px;
+		p {
+			text-indent: 3.7em;
+		}
+	}
+	//footer
+	.totop {
+		width: 10%;
+	}
+
+	//page-menu
+	section .platdujour,
+	.bento,
+	.sushi,
+	.onigiri,
+	.donburi,
+	.dessert,
+	.drink {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+/* smart phone */
+@media screen and (max-width: 767px) {
+	//common
+	section {
+		padding: 40px 30px;
+	}
+	.back {
+		padding-left: 10px;
+		img {
+			width: 50%;
+		}
+	}
+	// navbar
+	#header {
+		position: relative;
+	}
+	.navbar {
+		margin-top: -70px;
+		z-index: 1;
+	}
+	// .hiraku-open-btn {
+	// 	position: absolute;
+	// 	top: 5%;
+	// 	right: 0;
+	// 	transform: translateY(-50%);
+	// 	display: block;
+	// 	z-index: 1;
+	// 	outline: none;
+	// }
+	// .offcanvas-right {
+	ul {
+		margin-top: 30px;	
+		margin-right: 0;
+		margin-left: auto;
+	}
+	// }
+	// .g-nav {
+	// 	display: block;
+	// }
+	.nav-item {
+		margin-right: 5px;
+	}
+	.nav-link {
+		color: $_color-text;
+		font-size: $_font-size * 1.4;
+	}
+	//menu
+	.menus {
+		display: block;
+	}
+	.menu-wrap {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.more {
+		margin: 0 auto;
+	}
+	//access
+	.address-wrap {
+		display: block;
+	}
+	.photo-jujiya {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	.map-wrap {
+		margin-left: 0;
+		iframe {
+			width: 100%;
+		}
+	}
+	.mapinfo {
+		p {
+			text-indent: 0;
+		}
+	}
+	//footer
+	.totop {
+		width: 17%;
+	}
+
+	//page-menu
+	.pj-content {
+		>span {
+			display: block;
+			padding-left: 0;
+		}
+	}
+	.pj-price {
+		>span {
+			display: block;
+			padding-left: 0;
+		}
+	}
+
+	//page-news
+	.news-main {
+		padding: 40px 30px 60px;
+	}
+	.news-title, .news-detail {
+		text-indent: 0;
+	}
+}

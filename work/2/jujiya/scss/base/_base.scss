@@ -1,0 +1,131 @@
+/* #Base
+   -------------------------------------------------------------------------- */
+/**
+ * Baseレイヤーにはプロジェクトにおける、基本的なベーススタイルを定義します。
+ * 要素セレクタや属性セレクタなど、詳細度はできるかぎり低く保っておきます。
+ * 基本的にclass属性は使用しません。
+ */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html {
+	font-size: $_font-size;
+	line-height: 1.7;
+	margin: 0;
+	padding: 0;
+	// @include _mq-up() {
+	//   font-size: map-get($_font-size, md);
+	// }
+}
+
+body {
+	color: $_color-text;
+	font-family: $_font-family;
+	font-weight: normal;
+	/* アンチエイリアスを指定する */
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: auto;
+	/* メトリクスカーニングを指定する */
+	font-kerning: normal;
+	background-color: $_color-bg;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: inherit;
+	font-weight: bold;
+	line-height: 1.4;
+	color: inherit;
+}
+
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+ul, ol {
+	padding-left: 1em;
+	list-style: none;
+}
+/**
+ * ネストされたリストのマージンをリセットします。
+ */
+li {
+	> ul, > ol {
+		margin-bottom: 0;
+	}
+}
+
+/**
+ * `dt`と`dd`の左端を揃えます。
+ */
+dd {
+	margin-left: 0;
+}
+
+table {
+	width: 100%;
+}
+
+th {
+	text-align: left;
+}
+
+a {
+	text-decoration: none;
+	color: $_color-link;
+  // @include _on-event {
+  //   text-decoration: underline;
+  //   color: $_color-link--hover;
+  // }
+}
+
+/**
+ * フルードイメージにします。
+ */
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+/**
+ * IEでSVGがフルードイメージにならない不具合があります。
+ * 属性値が`.svg`で終わる要素に適応します。
+ */
+[src$=".svg"],
+[data$=".svg"] {
+	width: 100%;
+}
+
+/**
+ * 日本語では斜体を使用しないためリセットします。
+ */
+i,
+cite,
+em,
+address,
+dfn {
+	font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+hr,
+table,
+fieldset, figure,
+pre {
+	margin-top: 0;
+	margin-bottom: 0;
+}

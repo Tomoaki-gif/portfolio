@@ -1,0 +1,55 @@
+.page-title {
+	font-size: $_font-size * 2.8;
+}
+section {
+	> h3 {
+		font-size: $_font-size * 2.5;
+	}
+}
+section .platdujour {
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+.back{
+	&:hover {
+		cursor: pointer;
+	}
+}
+.bento {
+	padding-top: 0;
+}
+.bento-title {
+	margin-bottom: 10px;
+}
+.menus {
+	display: flex;
+	flex-wrap: wrap;
+}
+.menu-wrap {
+	justify-content: space-around;
+	align-items: center;
+	width: calc(33.3% - 10px);
+	margin: 5px 5px 15px 5px;
+}
+.menu-title span {
+	display: block;
+}
+.sushi {
+	padding-top: 0;
+}
+.sushi-title {
+	margin-bottom: 10px;
+}
+.dessert {
+	padding-top: 0;
+}
+.dessert-title {
+	margin-bottom: 10px;
+}
+.drink {
+	padding-top: 0;
+}
+.drink-title {
+	margin-bottom: 10px;
+}

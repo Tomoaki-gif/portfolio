@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/hiraku.css">
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+	<title>十時や｜Jujiya</title>
+</head>
+<body>
+	<!-- header start -->
+	<header id="header">
+		<div class="header-wrap">
+			<div class="container">
+
+				<button class="hiraku-open-btn" id="offcanvas-btn-right" data-toggle-offcanvas="#js-hiraku-offcanvas-1">
+					<span class="hiraku-open-btn-line"></span>
+				</button>
+
+				<!-- navbar for desktop -->
+				<nav class="navbar">	
+					<ul class="g-nav">
+						<li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+						<li class="nav-item"><a class="nav-link" href="#news">NEWS</a></li>
+						<li class="nav-item"><a class="nav-link" href="#menu">MENU</a></li>
+						<li class="nav-item"><a class="nav-link" href="#access">ACCESS</a></li>
+					</ul>
+				</nav>
+
+				<h1 class="header-image">
+					<div class="jujiya-image"><img src="img/layout/jujiya_top.png" alt="jujiya-bento"></div>
+					<div class="jujiya-caption"><img src="img/layout/jujiya.png" alt="JUJI-YA"></div>
+				</h1>
+
+			</div>
+		</div>
+	</header>
+	<!-- header end -->
+
+	<!-- navbar for mobile -->
+	<div class="offcanvas-right">
+		<ul class="g-nav">
+			<li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+			<li class="nav-item"><a class="nav-link" href="#news">NEWS</a></li>
+			<li class="nav-item"><a class="nav-link" href="#menu">MENU</a></li>
+			<li class="nav-item"><a class="nav-link" href="#access">ACCESS</a></li>
+		</ul>
+	</div>
+
+  <!--- Image Slider -->
+<!--   <div id="slides" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#slides" data-slide-to="0" class="active"></li>
+      <li data-target="#slides" data-slide-to="1"></li>
+      <li data-target="#slides" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/kb.png" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="img/kb.png" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="img/kb.png" alt="">
+      </div>
+    </div>
+  </div>
+ -->  <!--- Image Slider -->
+
+	<!--- NEWS start -->
+	<section id="news">
+		<h2 class="section-title">NEWS</h2>
+
+		<div class="container-fluid">
+			<ul class="news-list">
+				<li>
+					<a href="news/20190620.html">
+						<div><time datetime="2019-6-20">2019.06.20</time></div>
+						<p> Fermeture exceptionnelles le 1 juillet<br>7月1日の臨時閉店について </p>
+					</a>
+				</li>
+				<li>
+					<a href="news/20190615.html">
+						<div><time datetime="2019-6-15">2019.06.15</time></div>
+						<p> Nouveautés sur le produit <br> 新商品入荷 </p>
+					</a>
+				</li>
+				<li>
+					<a href="news/20190529.html">
+						<div><time datetime="2019-5-29">2019.05.29</time></div>
+						<p> Augmentation des prix <br> お弁当の値段改定について </p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!--- NEWS end -->
+
+	<!--- MENU start -->
+	<section id="menu">
+		<h2 class="section-title">MENU</h2>
+
+		<div class="container-fluid">
+			<div class="platdujour">
+				<p class="pj-title">Plat du Jour<span>本日の日替わり</span></p>
+				<p class="pj-content">Curry Japonais au Boeuf<span>ビーフカレー</span></p>
+				<p class="pj-price">Sans Friture - 8,90€<span>Avec Friture - 11,10€</span></p>
+
+				<img class="pj-week" src="img/platdujour.png" alt="platdujour">
+			</div>
+
+			<div class="menus">
+				<div class="menu-wrap">
+					<div class="menu">
+						<img class="menu-img" src="img/bento/bento_pf.jpg" alt="menuimg">
+
+						<div class="menu-body">
+							<h3 class="menu-title">Bento Poulet Frit<span>からあげ弁当</span></h3>
+							<h3 class="menu-price">11,50€</h3>
+							<p class="menu-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu-wrap">
+					<div class="menu">
+						<img class="menu-img" src="img/bento/bento_sg.jpg" alt="menuimg">
+
+						<div class="menu-body">
+							<h3 class="menu-title">Bento Saumon Grillé<span>鮭弁当</span></h3>
+							<h4 class="menu-price">11,10€</h4>
+							<p class="menu-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu-wrap">
+					<div class="menu">
+						<img class="menu-img" src="img/bento/bento_mix.jpg" alt="menuimg">
+
+						<div class="menu-body">
+							<h3 class="menu-title">Bento Friture Mix<span>ミックスフライ弁当</span></h3>
+							<h4 class="menu-price">12,10€</h4>
+							<p class="menu-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<a href="menu.html" class="more"><img src="img/layout/more.png" alt="more"></a>
+		</div>
+	</section>
+	<!--- MENU end -->
+
+	<!--- Access start -->
+	<section id="access">
+		<h2 class="section-title">ACCESS</h2>
+
+		<div class="container-fluid">
+
+			<div class="address-wrap">
+				<div class="photo-jujiya"><img src="img/layout/jujiya-restaurant.jpg" alt="jujiya restaurant"></div>
+
+				<div class="map-wrap">
+					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.5130011081114!2d2.3340293152077516!3d48.86749627928842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e3ac2d88d29%3A0x3e1bfb0fcb9ab68f!2z5Y2B5pmC44KE!5e0!3m2!1sja!2sjp!4v1553470085260" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<div class="mapinfo">
+						<p>À pied 4 min du métro Ligne 3 Quatre-Septembre</p>
+						<p>À pied 4 min du métro Lignes 7 et 14 Pyramides</p>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+	<!--- Access end -->
+
+	<!-- footer start -->
+	<footer id="footer">
+		<div class="inner">
+
+			<div class="jujiyainfo">
+				<p>Tel : +33 (0)1 42 86 02 22</p>
+				<p>E-mail : waiz@orange.com</p>
+			</div>
+
+	      <!-- <div class="snslink">
+	        <img src="img/facebook.svg" alt="facebook">
+	      </div> -->
+
+			<div class="totop"><a href="#"><img src="img/layout/top.png" alt="totop"></a></div>
+
+			<p class="copyright">Copyright &copy; 2019 Jujiya All rights reserved.</p>
+		</div>
+	</footer>
+	<!-- footer end -->
+
+	<script src="js/hiraku.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

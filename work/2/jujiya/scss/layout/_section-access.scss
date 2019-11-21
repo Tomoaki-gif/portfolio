@@ -1,0 +1,32 @@
+.map-wrap {
+	margin-left: 30px;
+}
+.map {
+	margin-bottom: 20px;	
+}
+.address-wrap {
+	display: flex;
+}
+.photo-jujiya {
+	width: 70%;
+}
+.mapinfo {
+	p {
+		font-size: $_font-size * 1.2;
+		margin-bottom: 10px;
+	}
+	img {
+		width: 24px;
+		margin-right: 5px;
+	}
+}
+.name {
+	font-size: $_font-size * 1.43;
+	font-weight: 700;
+}
+.opening-hour {
+	> span {
+		display: block;
+		text-indent: 1.8em;
+	}
+}

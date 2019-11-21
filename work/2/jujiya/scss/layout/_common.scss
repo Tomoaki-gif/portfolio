@@ -1,0 +1,23 @@
+section {
+	padding: 80px 60px;
+}
+.section-title {
+	font-size: $_font-size * 2.5;
+	font-weight: 600;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.container-fluid {
+	margin-top: 30px;
+}
+.back {
+	background-color: #E6E6E6;
+	padding-top: 40px;
+	padding-left: 20px;
+}
+.platdujour {
+	>.pj-week {
+		display: block;
+		margin: 0 auto;
+	}
+}

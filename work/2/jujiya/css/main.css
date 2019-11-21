@@ -1,0 +1,555 @@
+@charset "UTF-8";
+/* #Base
+   -------------------------------------------------------------------------- */
+/**
+ * Baseレイヤーにはプロジェクトにおける、基本的なベーススタイルを定義します。
+ * 要素セレクタや属性セレクタなど、詳細度はできるかぎり低く保っておきます。
+ * 基本的にclass属性は使用しません。
+ */
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+html {
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: #333;
+  font-family: Georgia, "游明朝", "YuMincho", "Hiragino Mincho ProN", "HG明朝E", Meiryo, serif;
+  font-weight: normal;
+  /* アンチエイリアスを指定する */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  /* メトリクスカーニングを指定する */
+  font-kerning: normal;
+  background-color: #fff;
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 1.4;
+  color: inherit; }
+
+ul, ol {
+  padding-left: 1em;
+  list-style: none; }
+
+/**
+ * ネストされたリストのマージンをリセットします。
+ */
+li > ul, li > ol {
+  margin-bottom: 0; }
+
+/**
+ * `dt`と`dd`の左端を揃えます。
+ */
+dd {
+  margin-left: 0; }
+
+table {
+  width: 100%; }
+
+th {
+  text-align: left; }
+
+a {
+  text-decoration: none;
+  color: #2b70ba; }
+
+/**
+ * フルードイメージにします。
+ */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; }
+
+/**
+ * IEでSVGがフルードイメージにならない不具合があります。
+ * 属性値が`.svg`で終わる要素に適応します。
+ */
+[src$=".svg"],
+[data$=".svg"] {
+  width: 100%; }
+
+/**
+ * 日本語では斜体を使用しないためリセットします。
+ */
+i,
+cite,
+em,
+address,
+dfn {
+  font-style: normal; }
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+hr,
+table,
+fieldset, figure,
+pre {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+section {
+  padding: 80px 60px; }
+
+.section-title {
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.container-fluid {
+  margin-top: 30px; }
+
+.back {
+  background-color: #E6E6E6;
+  padding-top: 40px;
+  padding-left: 20px; }
+
+.platdujour > .pj-week {
+  display: block;
+  margin: 0 auto; }
+
+#header {
+  position: relative; }
+.navbar {
+  z-index: 1;
+}
+/*.g-nav {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  z-index: 1; }
+*/
+.nav-item {
+  width: 100%;
+  text-align: center;
+  margin-right: 10px; }
+
+.nav-link {
+  display: inline-block;
+  font-size: 28px;
+  color: #fff;
+  text-decoration: none; }
+  .nav-link:hover {
+    color: #118B0A; }
+
+.header-wrap .container {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0; }
+
+.header-image {
+  position: relative; }
+
+.jujiya-image {
+  position: relative; }
+  .jujiya-image img {
+    width: 100%; }
+  .jujiya-image::after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+.jujiya-caption img {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%; }
+
+#footer {
+  background-image: url("../img/layout/footer-bg.jpg");
+  position: relative;
+  color: #fff;
+  background-color: #3D3D3D;
+  padding: 20px; }
+
+.totop {
+  position: fixed;
+  display: none;
+  right: 8px;
+  bottom: 8px;
+  width: 5%; }
+  .totop a {
+    display: block;
+    padding: 8px;
+    text-decoration: none; }
+    .totop a:hover {
+      opacity: 1; }
+
+.jujiyainfo {
+  font-size: 16.8px; }
+
+.copyright {
+  text-align: center;
+  margin-top: 30px; }
+
+.news-list {
+  width: 100%;
+  max-height: 500px;
+  overflow-y: scroll;  
+  font-size: 21px;
+  line-height: 1;
+  margin-top: 30px;
+  padding-left: 0;
+  vertical-align: middle; }
+  .news-list li {
+    background-color: #F3F3F3; }
+    .news-list li:nth-child(odd) {
+      background-color: #E6E6E6; }
+  .news-list a {
+    display: table;
+    width: 100%;
+    color: #333;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out; }
+  .news-list div {
+    display: table-cell;
+    width: 144px; }
+  .news-list time {
+    display: table-cell;
+    vertical-align: top;
+    width: 125px;
+    padding-top: 10px;
+    padding-left: 10px; }
+  .news-list p {
+    display: table-cell;
+    line-height: 30px;
+    margin-left: 30px;
+    vertical-align: middle; }
+    .news-list p:hover {
+      background-color: #FDFDFD;
+      cursor: pointer; }
+
+#menu {
+  background-color: #E6E6E6; }
+
+.platdujour {
+  margin-bottom: 40px; }
+
+.pj-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 39.2px;
+  font-weight: 700;
+  margin-bottom: 10px; }
+  .pj-title a {
+    color: #333; }
+  .pj-title a:hover {
+    cursor: pointer; }      
+    .pj-title a span {
+      font-size: 21px;
+      padding-left: 15px; }
+
+.pj-content {
+  font-size: 28px;
+  margin-left: 20px; }
+  .pj-content > span {
+    padding-left: 20px; }
+
+.pj-price {
+  font-size: 28px;
+  margin-left: 20px;
+  margin-bottom: 20px; }
+  .pj-price > span {
+    padding-left: 20px; }
+
+.menus {
+  display: flex; }
+
+.menu-wrap {
+  width: 40%;
+  margin-right: 30px; }
+  .menu-wrap:last-child {
+    margin-right: 0; }
+
+.menu-img {
+  margin-bottom: 20px; }
+
+.menu-price {
+  font-size: 25.2px;
+  margin-bottom: 10px; }
+
+.menu-text {
+  font-size: 16.8px; }
+
+.more {
+  display: block;
+  margin-top: 40px;
+  margin-left: auto;
+  width: 350px; }
+  .more:hover {
+  cursor: pointer; }      
+
+.map-wrap {
+  margin-left: 30px; }
+
+.map {
+  margin-bottom: 20px; }
+
+.address-wrap {
+  display: flex; }
+
+.photo-jujiya {
+  width: 70%; }
+
+.mapinfo {
+  text-align: left;
+  margin-top: 20px; }
+  .mapinfo p {
+    font-size: 16.8px;
+    margin-bottom: 10px; }
+  .mapinfo img {
+    width: 24px;
+    margin-right: 5px; }
+
+.name {
+  font-size: 20.02px;
+  font-weight: 700; }
+
+.opening-hour > span {
+  display: block;
+  text-indent: 1.8em; }
+
+.page-title {
+  font-size: 39.2px; }
+
+section > h3 {
+  font-size: 35px; }
+
+section .platdujour {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0; }
+
+.back:hover {
+  cursor: pointer;}
+
+.bento {
+  padding-top: 0; }
+
+.bento-title {
+  margin-bottom: 10px; }
+
+.menus {
+  display: flex;
+  flex-wrap: wrap; }
+
+.menu-wrap {
+  justify-content: space-around;
+  align-items: center;
+  width: calc(33.3% - 10px);
+  margin: 5px 5px 15px 5px; }
+
+.menu-title span {
+  display: block; }
+
+.sushi {
+  padding-top: 0; }
+
+.sushi-title {
+  margin-bottom: 10px; }
+
+.dessert {
+  padding-top: 0; }
+
+.dessert-title {
+  margin-bottom: 10px; }
+
+.drink {
+  padding-top: 0; }
+
+.drink-title {
+  margin-bottom: 10px; }
+
+.news-main {
+  padding: 80px 60px;
+  background-color: #E6E6E6; }
+
+.news-content {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 5px; }
+
+.news-title {
+  font-size: 35px;
+  text-indent: 1em;
+  margin-bottom: 20px; }
+
+.news-detail {
+  text-indent: 2.7em;
+  margin-top: 20px; }
+  .news-detail p {
+    font-size: 21px; }
+
+/* pc */
+@media screen and (min-width: 1180px) {
+  #header {
+    position: relative; }
+
+/*  .hiraku-open-btn {
+    display: none; }*/
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0; }
+
+/*  .js-hiraku-offcanvas {
+    display: block; } }
+*//* tablet */
+}
+@media screen and (max-width: 1179px) {
+  #header {
+    position: relative; }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0; 
+    z-index: 1; }
+
+  .nav-item {
+    margin-right: 5px; }
+
+  .nav-link {
+    color: #fff;
+    font-size: 19.6px; }
+
+/*  .hiraku-open-btn {
+    display: none; }
+*/
+  .menu-wrap {
+    width: calc(50% - 10px); }
+
+  .menu-wrap:nth-child(2) {
+    display: none; }
+
+  .address-wrap {
+    display: block; }
+
+  .photo-jujiya {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px; }
+
+  .map-wrap {
+    margin-left: 0; }
+    .map-wrap iframe {
+      display: block;
+      margin: 0 auto; }
+
+  .totop {
+    width: 10%; }
+
+  section .platdujour,
+  .bento,
+  .sushi,
+  .onigiri,
+  .donburi,
+  .dessert,
+  .drink {
+    padding-left: 0;
+    padding-right: 0; } }
+/* smart phone */
+@media screen and (max-width: 767px) {
+  section {
+    padding: 40px 30px; }
+
+  .back {
+    padding-left: 10px; }
+    .back img {
+      width: 50%; }
+
+  #header {
+    position: relative; }
+
+  .navbar {
+    z-index: 1; }
+
+/*  .hiraku-open-btn {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    transform: translateY(-50%);
+    display: block;
+    z-index: 1;
+    outline: none; }
+*/
+  /*.offcanvas-right */
+  ul {
+    width: 90%;
+    margin-top: 50px;
+    margin-right: 20px; }
+
+  .nav-item {
+    margin-right: 5px; }
+
+  .nav-link {
+    color: #333;
+    font-size: 19.6px; }
+
+  .menus {
+    display: block; }
+
+  .menu-wrap {
+    width: 100%;
+    margin-bottom: 30px; }
+
+  .more {
+    margin: 0 auto; }
+
+  .address-wrap {
+    display: block; }
+
+  .photo-jujiya {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px; }
+
+  .map-wrap {
+    margin-left: 0; }
+    .map-wrap iframe {
+      width: 100%; }
+
+  .mapinfo p {
+    text-indent: 0; }
+
+  .totop {
+    width: 17%; }
+
+  .pj-content > span {
+    display: block;
+    padding-left: 0; }
+
+  .pj-price > span {
+    display: block;
+    padding-left: 0; }
+
+  .news-main {
+    padding: 40px 30px 60px; }
+
+  .news-title, .news-detail {
+    text-indent: 0; } }
+
+/*# sourceMappingURL=main.css.map */
